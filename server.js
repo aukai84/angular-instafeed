@@ -22,8 +22,9 @@ app.get('/api/instafeed', (req, res, next) => {
          });
     })
     .then(images => {
-        console.log(images);
-        res.json(JSON.parse(images));
+        let newData = JSON.parse(images);
+        res.send(`<img src=${newData.data[4].images.low_resolution.url}>`);
+        // res.json(newData.data[0].images.low_resolution.url);
     })
 })
 
