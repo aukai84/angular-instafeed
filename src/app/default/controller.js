@@ -2,7 +2,7 @@ import {DefaultServiceName} from './service';
 console.log(DefaultServiceName)
 export const DefaultCtrl = ['$scope', DefaultServiceName, class DefaultCtrl {
     constructor($scope, DefaultService){
-        this.title = 'default title';
+        this.title = 'Welcome to Aukaigram';
         $scope.posts = [];
         DefaultService.getPosts()
         .then((result) => {
