@@ -1,0 +1,7 @@
+<div>{{list.title}}</div>
+<div id="list-container">
+    <div class="list-images-card" ng-repeat="post in posts">
+        <img class="list-images" ng-src="{{post.images.standard_resolution.url}}">
+        <div class="list-information">{{post.caption.text}}</div>
+    </div>
+</div>

@@ -41,3 +41,27 @@ footer {
     height: 100%;
     object-fit: cover;
 }
+
+#list-container {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+.list-images-card {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+}
+
+.list-images {
+    float: left;
+    width: 20%;
+    height: 20%;
+    margin: 1rem;
+}
+
+.list-information {
+    float: left;
+    margin: 1rem;
+}

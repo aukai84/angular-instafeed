@@ -1,12 +1,13 @@
 const express = require('express');
 const https = require('https');
-const env = require('dotenv').config();
+
 
 
 const app = express();
 
 const USER_ID = process.env.USER_ID;
 const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
+console.log(USER_ID)
 
 
 let targetUrl = `https://api.instagram.com/v1/users/${USER_ID}/media/recent/?access_token=${ACCESS_TOKEN}`;
@@ -29,7 +30,6 @@ app.get('/api/instafeed', (req, res, next) => {
     })
     .then(images => {
         let instaData = JSON.parse(images);
-        console.log(instaData.data)
         res.json(instaData.data);
     });
 });
